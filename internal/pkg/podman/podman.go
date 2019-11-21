@@ -287,7 +287,7 @@ func (hnd *Handle) GetPrefixedVolumes(prefix string) ([]iopodman.Volume, error) 
 		return ret, err
 	}
 
-	log.Printf("found %d volumess in the system", len(volumes))
+	log.Printf("found %d volumes in the system", len(volumes))
 	for _, vol := range volumes {
 		if strings.HasPrefix(vol.Name, prefix) {
 			log.Printf("matching volume: %s @(%s)\n", vol.Name, vol.MountPoint)
